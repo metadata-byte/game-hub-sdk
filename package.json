@@ -18,20 +18,7 @@
     "url": "https://github.com/metadata-byte/game-hub-sdk/issues"
   },
   "homepage": "https://github.com/metadata-byte/game-hub-sdk#readme",
-  "imports": {
-    "#error": {
-      "import": "./dist/error/index.js"
-    },
-    "#fastify": {
-      "import": "./dist/fastify/index.js"
-    },
-    "#formatter": {
-      "import": "./dist/formatter/index.js"
-    },
-    "#schema": {
-      "import": "./dist/schema/index.js"
-    }
-  },
+  "imports": {},
   "exports": {
     ".": {
       "import": "./dist/index.js"
