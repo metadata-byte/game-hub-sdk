@@ -1,6 +1,6 @@
 {
   "name": "@metadata-byte/game-hub-sdk",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "SDK for @metadata-byte/game-hub",
   "type": "module",
   "scripts": {
