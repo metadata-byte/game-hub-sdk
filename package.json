@@ -1,0 +1,66 @@
+{
+  "name": "@metadata-byte/game-hub-sdk",
+  "version": "1.0.0",
+  "description": "SDK for @metadata-byte/game-hub",
+  "type": "module",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "lint": "eslint"
+  },
+  "author": "Joshua Avalon",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metadata-byte/game-hub-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/metadata-byte/game-hub-sdk/issues"
+  },
+  "homepage": "https://github.com/metadata-byte/game-hub-sdk#readme",
+  "imports": {
+    "#error": {
+      "import": "./dist/error/index.js"
+    },
+    "#fastify": {
+      "import": "./dist/fastify/index.js"
+    },
+    "#formatter": {
+      "import": "./dist/formatter/index.js"
+    },
+    "#schema": {
+      "import": "./dist/schema/index.js"
+    }
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    },
+    "./types": {
+      "import": "./dist/pocketbase-types.js"
+    }
+  },
+  "keywords": [
+    "fastify",
+    "fastify-plugin"
+  ],
+  "files": [
+    "dist/**/*",
+    "!dist/**/__tests__/**/*"
+  ],
+  "devDependencies": {
+    "@jafps/plugin-error": "^1.0.1",
+    "@joshuaavalon/eslint-config-javascript": "^10.0.0",
+    "@joshuaavalon/eslint-config-typescript": "^10.0.0",
+    "@types/node": "^25.2.3",
+    "eslint": "^9.38.0",
+    "fastify": "^5.6.1",
+    "globals": "^16.4.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.48.0"
+  },
+  "dependencies": {
+    "pocketbase": "^0.26.8"
+  }
+}
