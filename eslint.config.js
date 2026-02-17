@@ -5,7 +5,7 @@ import typescript from "typescript-eslint";
 
 
 export default [
-  { ignores: ["**/node_modules", "**/dist", "src/pocketbase-types.ts"] },
+  { ignores: ["**/node_modules", "**/dist"] },
   {
     ...jsConfig,
     files: ["**/*.js", "**/*.mjs", "**/*.cjs"],

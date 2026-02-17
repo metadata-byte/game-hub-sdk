@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 /**
 * This file was @generated using pocketbase-typegen
 */
@@ -16,6 +17,7 @@ export enum Collections {
   Mfas = "_mfas",
   Otps = "_otps",
   Superusers = "_superusers",
+  Tags = "tags",
   Users = "users"
 }
 
@@ -118,6 +120,7 @@ export type GamesRecord = {
   created: IsoAutoDateString;
   description?: string;
   developers?: RecordIdString[];
+  genres?: RecordIdString[];
   icon?: FileNameString;
   id: string;
   links?: RecordIdString[];
@@ -129,6 +132,7 @@ export type GamesRecord = {
   released?: IsoDateString;
   screenshots?: FileNameString[];
   summary?: string;
+  tags?: RecordIdString[];
   updated: IsoAutoDateString;
 };
 
@@ -157,6 +161,13 @@ export type LinksRecord = {
   url: string;
 };
 
+export type TagsRecord = {
+  created: IsoAutoDateString;
+  id: string;
+  name: string;
+  updated: IsoAutoDateString;
+};
+
 export type UsersRecord = {
   avatar?: FileNameString;
   created: IsoAutoDateString;
@@ -181,6 +192,7 @@ export type GamesResponse<Texpand = unknown> = BaseSystemFields<Texpand> & Requi
 export type GenresResponse<Texpand = unknown> = BaseSystemFields<Texpand> & Required<GenresRecord>;
 export type LinkTypesResponse<Texpand = unknown> = BaseSystemFields<Texpand> & Required<LinkTypesRecord>;
 export type LinksResponse<Texpand = unknown> = BaseSystemFields<Texpand> & Required<LinksRecord>;
+export type TagsResponse<Texpand = unknown> = BaseSystemFields<Texpand> & Required<TagsRecord>;
 export type UsersResponse<Texpand = unknown> = AuthSystemFields<Texpand> & Required<UsersRecord>;
 
 // Types containing all Records and Responses, useful for creating typing helper functions
@@ -196,6 +208,7 @@ export type CollectionRecords = {
   genres: GenresRecord;
   links: LinksRecord;
   linkTypes: LinkTypesRecord;
+  tags: TagsRecord;
   users: UsersRecord;
 };
 
@@ -210,6 +223,7 @@ export type CollectionResponses = {
   genres: GenresResponse;
   links: LinksResponse;
   linkTypes: LinkTypesResponse;
+  tags: TagsResponse;
   users: UsersResponse;
 };
 
