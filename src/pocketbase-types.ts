@@ -114,6 +114,7 @@ export type CompaniesRecord = {
 
 export type GamesRecord = {
   ageRating?: number;
+  averagePlaytime?: number;
   background?: FileNameString;
   banner?: FileNameString;
   cover?: FileNameString;
@@ -123,6 +124,10 @@ export type GamesRecord = {
   genres?: RecordIdString[];
   icon?: FileNameString;
   id: string;
+  installerExecutable?: string;
+  installerParameters?: string;
+  launchExecutable?: string;
+  launchParameters?: string;
   links?: RecordIdString[];
   matchName?: string;
   name: string;
@@ -133,6 +138,8 @@ export type GamesRecord = {
   screenshots?: FileNameString[];
   summary?: string;
   tags?: RecordIdString[];
+  uninstallerExecutable?: string;
+  uninstallerParameters?: string;
   updated: IsoAutoDateString;
 };
 
@@ -150,7 +157,7 @@ export type LinkTypesRecord = {
   id: string;
   name: string;
   updated: IsoAutoDateString;
-  url: string;
+  url?: string;
 };
 
 export type LinksRecord = {
